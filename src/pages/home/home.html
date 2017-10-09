@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>
+     Notionic v0.2
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+    <button ion-button secondary menuToggle>Toggle Menu 3</button>
+  <ion-list>
+    <button ion-item *ngFor="let note of notes" (click)="goToDetail(note.id)">
+      {{ note.title }}
+    </button>  
+  </ion-list>
+  <div >
+    <button ion-button block (click)="createNote()">Crear Nota</button>
+  </div>
+  <div text-center> <button ion-button color="danger" (click)="cerrar()" >Log out</button></div>
+</ion-content>
